@@ -11,12 +11,34 @@
   --footer-bg-color: #2f303a;
   --section-bg-color: #f5f4fa;
 }
-
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+}
 body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   color: var(--primery-text-color);
   background-color: var(--white-color);
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 0.5px solid red;
 }
 .link {
   text-decoration: none;
@@ -29,17 +51,33 @@ body {
 
 .header {
   background-color: var(--white-color);
+  outline: 0.5px solid red;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .header-logo {
+  margin-right: 93px;
+
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 
   color: var(--logo-head-color);
+  outline: 0.5px solid red;
 }
 .web {
   color: var(--accent-color);
+}
+.navigation-menu {
+  display: flex;
+}
+.navigation-item:not(:last-child) {
+  margin-right: 50px;
 }
 .navigation-link {
   font-weight: 500;
@@ -48,11 +86,19 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--nav-color);
+  outline: 0.5px solid red;
 }
 .active,
 .navigation-link:hover,
 .navigation-link:focus {
   color: var(--accent-color);
+}
+.contacts-list {
+  display: flex;
+  margin-left: auto;
+}
+.cotacts-item:not(:last-child) {
+  margin-right: 50px;
 }
 .contacts-link {
   font-weight: 500;
@@ -60,6 +106,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primery-text-color);
+  outline: 0.5px solid red;
 }
 .contacts-link:hover,
 .contacts-link:focus {
@@ -69,13 +116,15 @@ body {
 /* Hero */
 
 .hero {
+  padding: 200px 250px;
   background-color: var(--footer-bg-color);
+  text-align: center;
 }
 .hero-title {
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
@@ -86,6 +135,8 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 
+  padding: 10px 32px;
+  margin: 0 auto;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -107,7 +158,16 @@ body {
 .advantages-title {
   display: none;
 }
+.advantages-list {
+  display: flex;
+  margin: 94px 0px;
+}
+.advantage-item:not(:last-child) {
+  margin-right: 30px;
+  outline: 0.5px solid red;
+}
 .advantage-subtitle {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -122,11 +182,16 @@ body {
 /* work */
 
 .work-title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   color: var(--titel-text-color);
+}
+.work-list {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Team */
@@ -140,6 +205,9 @@ body {
   line-height: 1.17;
   text-align: center;
   color: var(--titel-text-color);
+}
+.team-list {
+  display: flex;
 }
 .team-subtitle {
   font-weight: 500;
