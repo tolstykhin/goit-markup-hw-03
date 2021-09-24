@@ -26,6 +26,8 @@ ul {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 body {
   font-family: Roboto, sans-serif;
@@ -38,7 +40,10 @@ body {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 0.5px solid red;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .link {
   text-decoration: none;
@@ -51,16 +56,16 @@ body {
 
 .header {
   background-color: var(--white-color);
-  outline: 0.5px solid red;
+  border-bottom: 1px solid #ececec;
 }
 .header-container {
   display: flex;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 .header-logo {
   margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -68,7 +73,6 @@ body {
   line-height: 1.19;
 
   color: var(--logo-head-color);
-  outline: 0.5px solid red;
 }
 .web {
   color: var(--accent-color);
@@ -80,13 +84,15 @@ body {
   margin-right: 50px;
 }
 .navigation-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 
   color: var(--nav-color);
-  outline: 0.5px solid red;
 }
 .active,
 .navigation-link:hover,
@@ -101,12 +107,14 @@ body {
   margin-right: 50px;
 }
 .contacts-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primery-text-color);
-  outline: 0.5px solid red;
 }
 .contacts-link:hover,
 .contacts-link:focus {
@@ -116,12 +124,16 @@ body {
 /* Hero */
 
 .hero {
-  padding: 200px 250px;
   background-color: var(--footer-bg-color);
   text-align: center;
 }
+.hero-container {
+  padding: 200px 240px;
+}
 .hero-title {
   margin-bottom: 30px;
+
+  max-width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -160,11 +172,10 @@ body {
 }
 .advantages-list {
   display: flex;
-  margin: 94px 0px;
+  min-width: 270px;
 }
 .advantage-item:not(:last-child) {
   margin-right: 30px;
-  outline: 0.5px solid red;
 }
 .advantage-subtitle {
   margin-bottom: 10px;
@@ -181,8 +192,12 @@ body {
 
 /* work */
 
+.work {
+  padding-top: 0;
+}
 .work-title {
   margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -191,7 +206,13 @@ body {
 }
 .work-list {
   display: flex;
-  justify-content: space-between;
+}
+.work-item {
+  flex-basis: calc(100 / 3 - 30px);
+}
+.work-item:not(:last-child) {
+  margin-right: 30px;
+  min-width: 370px;
 }
 
 /* Team */
@@ -200,6 +221,8 @@ body {
   background-color: var(--section-bg-color);
 }
 .team-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -209,7 +232,22 @@ body {
 .team-list {
   display: flex;
 }
+.team-item {
+  flex-basis: calc(100 / 4 - 30px);
+}
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+.team-content {
+  padding: 30px 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  background: var(--white-color);
+}
 .team-subtitle {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -224,9 +262,23 @@ body {
 
 /*----------------- Portfolio -----------------*/
 
+.filter-title {
+  overflow: hidden;
+  font-size: 0px;
+}
+.filter-list {
+  display: flex;
+  margin-bottom: 34px;
+  justify-content: center;
+}
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
 .filter-btn {
+  padding: 6px 22px;
   background: #f5f4fa;
   border-radius: 4px;
+  border-width: 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -247,7 +299,26 @@ body {
   text-align: center;
   color: var(--accent-color-btn);
 }
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
+.portfolio-item {
+  flex-basis: calc(100 / 3 - 30px);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.portfolio-content {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
 .portfolio-link-title {
+  margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -264,7 +335,15 @@ body {
 .footer {
   background-color: var(--footer-bg-color);
 }
+.footer-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .footer-logo {
+  display: block;
+  max-width: 135px;
+  margin-bottom: 20px;
+
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -277,12 +356,19 @@ body {
   font-style: normal;
   color: var(--white-color);
 }
+.footer-contact-item {
+  min-width: 231px;
+}
+.footer-contact-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .footer-contact-link {
   font-size: 14px;
   line-height: 1.71;
   color: var(--footer-contact-color);
 }
-.footer-contackt-link:hover,
-.footer-contackt-link:focus {
+.footer-contact-link:hover,
+.footer-contact-link:focus {
   color: var(--accent-color);
 }
